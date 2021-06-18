@@ -103,7 +103,7 @@ namespace MDH.Linq.Extensions
 
         public static IQueryable<TEntity> Paging<TEntity, TInput>(this IQueryable<TEntity> query, int Skip, int Take)
         {
-            return query;
+            return query.Skip(Skip).Take(Take);
         }
 
         public static IQueryable<TEntity> Sorting<TEntity, TInput>(this IQueryable<TEntity> query, TInput input)
